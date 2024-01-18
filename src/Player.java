@@ -6,6 +6,9 @@ public class Player {
         playerName = name;
         chipAmount = 100;
     }
+    public String getName() {
+        return playerName;
+    }
     public void wager(int amount) {
         wagerAmount = amount;
     }

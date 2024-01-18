@@ -95,8 +95,21 @@ public class Ceelo {
         } catch (Exception e) {
 
         }
-        bob = "The rich guy distributes a hundred chips for each player before proceeding to plop a thousand of them in front of himself";
+        bob = "The rich guy distributes a hundred chips for each player. He plops a thousand of them in front of himself.";
         blurbSpitter(bob, 30);
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+
+        }
+
+    }
+    public void turns() {
+        Scanner scan = new Scanner(System.in);
+        String name = Player.getName();
+        String bob = "\"As the Banker, I shall go first, then\" " + ;
+
+
     }
     public void timeToDie() {
         Die.createDice();
