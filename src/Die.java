@@ -1,6 +1,6 @@
 public class Die {
     public int die;
-    private int[] dice;
+    public int[] dice;
     public Die() {
         die = 0;
     }
@@ -27,7 +27,6 @@ public class Die {
             return false;
         }
     }
-
     public int score() {
         if (dice[1] != dice[2] && dice[1] != dice[3] && dice[2] == dice[3]) {
             return dice[1];
@@ -37,6 +36,11 @@ public class Die {
             return dice[3];
         } else {
             return 0;
+        }
+    }
+    public void results() {
+        if (automaticWin() == false) {
+            score();
         }
     }
 }

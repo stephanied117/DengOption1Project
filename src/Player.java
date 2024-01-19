@@ -2,19 +2,38 @@ public class Player {
     private String playerName;
     private int wagerAmount;
     private int chipAmount;
-    public Player(String name) {
+    private int score;
+    public Player(String name, int chips, int score, int wager) {
         playerName = name;
         chipAmount = 100;
+        this.score = score;
+        wagerAmount = wager;
     }
     public String getName() {
         return playerName;
     }
-    public void wager(int amount) {
+    public int getWager() {
+        return wagerAmount;
+    }
+    public void setWager(int amount) {
         wagerAmount = amount;
     }
-
-    public boolean myTurn() {
+    public void penalty() {
+        chipAmount -= wagerAmount;
+    }
+    public void win(Banker bob) {
+        chipAmount += wagerAmount;
+    }
+    public boolean noChips() {
+        if (chipAmount <= 0) {
+            return true;
+        }
         return false;
+    }
+    public void rolling(Die[] dice) {
+        for (Die d : dice) {
+            d.roll();
+        }
     }
 
 
