@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Ceelo run = new Ceelo();
-        run.start();
+        // runs the game
+        Ceelo game = new Ceelo();
+        game.start();
     }
 }
